@@ -6,7 +6,19 @@ for(var i = 0 ; i< total ; i++){
     function onClick(){
         var buttonClicked = this.innerHTML;
 
-        switch(buttonClicked){
+        keyPresses(buttonClicked);
+
+    }
+}
+
+document.addEventListener("keydown", function(event){
+    keyPresses(event.key);
+
+    });
+
+    function keyPresses(key){
+
+        switch(key){
             case "w":
                 var crash = new Audio('sounds/crash.mp3');
                 crash.play();
@@ -44,11 +56,15 @@ for(var i = 0 ; i< total ; i++){
                 
             default: 
            console.log(buttonClicked);
-        }
-
 
     }
 }
+
+    
+        
+    
+    
+
 
 
 
